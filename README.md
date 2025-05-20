@@ -75,37 +75,110 @@ The `First_5_Practicals` directory contains foundational blockchain exercises fo
 
 ## Further Practicals
 
-The `Futher_Practicals` directory contains more advanced Solidity smart contracts for Ethereum blockchain applications:
+The `Futher_Practicals` directory contains more advanced Solidity smart contracts for Ethereum blockchain applications. Each contract has been implemented, compiled, and tested using Remix IDE.
 
-1. **Ether Splitter (`Ether_Splitter/EtherSplitter.sol`)**
+### 1. **Ether Splitter (`Ether_Splitter/EtherSplitter.sol`)**
    - A contract that automatically splits incoming Ether between three recipients
    - Features include deposit function, automatic splitting, and recipient management
    - Use case: Automatic revenue sharing or payment distribution systems
+   
+   ![Ether Splitter Implementation](Futher_Practicals/all_screenshots/Ether_split.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Receive and split Ether between three recipients
+   function deposit() public payable
+   
+   // Update recipient addresses
+   function updateRecipients(address payable _recipient1, address payable _recipient2, address payable _recipient3) public
+   ```
 
-2. **Voting System (`Voting_system/VotingSystem.sol`)**
+### 2. **Voting System (`Voting_system/VotingSystem.sol`)**
    - A decentralized voting system that tracks candidates and votes
    - Prevents double voting through address tracking
    - Use case: Transparent and tamper-proof elections or decision-making processes
+   
+   ![Voting System Compilation & Deployment](Futher_Practicals/all_screenshots/voting_sytem_compilation_&_deployment.png)
+   ![Voting System Testing](Futher_Practicals/all_screenshots/voting_system_testing.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Cast a vote for a candidate
+   function vote(uint _candidateId) public
+   
+   // Get candidate information
+   function getCandidate(uint _candidateId) public view returns (uint, string memory, uint)
+   ```
 
-3. **Student Records (`Student_Records/StudentRecords.sol`)**
+### 3. **Student Records (`Student_Records/StudentRecords.sol`)**
    - Manages student information on the blockchain
    - Stores student names and roll numbers with existence verification
    - Use case: Educational record management with immutable history
+   
+   ![Student Records Compilation & Deployment](Futher_Practicals/all_screenshots/Student_records_compilation&_deployment.png)
+   ![Student Records Testing](Futher_Practicals/all_screenshots/Student_records_testing.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Add a new student to the records
+   function addStudent(string memory _name, uint _rollNumber) public
+   
+   // Retrieve student information
+   function getStudent(uint _rollNumber) public view returns (string memory, uint)
+   ```
 
-4. **Owner Only Function (`Owner_only_Function/OwnerOnly.sol`)**
+### 4. **Owner Only Function (`Owner_only_Function/OwnerOnly.sol`)**
    - Demonstrates access control using the `onlyOwner` modifier
    - Allows only the contract owner to modify a secret value
    - Use case: Administrative control in decentralized applications
+   
+   ![Owner Only Deployment](Futher_Practicals/all_screenshots/Only_owner_deployment.png)
+   ![Owner Only Testing](Futher_Practicals/all_screenshots/Only_owner_testing.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Set a secret value (only owner can call)
+   function setSecretValue(uint _newValue) public onlyOwner
+   
+   // Transfer ownership to a new address
+   function transferOwnership(address _newOwner) public onlyOwner
+   ```
 
-5. **Top Donors Tracker (`Top_Donors_Tracker/TopDonorsTracker.sol`)**
+### 5. **Top Donors Tracker (`Top_Donors_Tracker/TopDonorsTracker.sol`)**
    - Tracks and sorts the top three donors to a contract
    - Maintains donation history and total donations
    - Use case: Charity organizations or fundraising campaigns with recognition features
+   
+   ![Top Donors Implementation](Futher_Practicals/all_screenshots/Top_donor.png)
+   ![Top Donors Deployment & Testing](Futher_Practicals/all_screenshots/Top_donor_deployment&testing.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Make a donation to the contract
+   function donate() public payable
+   
+   // Get the top three donors
+   function getTopDonors() public view returns (address[3] memory, uint[3] memory)
+   ```
 
-6. **Simple Auction (`Simple_auction/SimpleAuction.sol`)**
+### 6. **Simple Auction (`Simple_auction/SimpleAuction.sol`)**
    - Implements a time-limited auction system
    - Handles bidding, fund management, and auction completion
    - Use case: Decentralized auction platforms or NFT sales
+   
+   ![Auction Bidding](Futher_Practicals/all_screenshots/Auction_bid.png)
+   
+   **Key Functions:**
+   ```solidity
+   // Place a bid in the auction
+   function bid() public payable
+   
+   // Withdraw funds if outbid
+   function withdraw() public returns (bool)
+   
+   // End the auction and transfer funds to beneficiary
+   function auctionEnd() public
+   ```
 
 ### How to Use the Solidity Contracts
 
