@@ -5,7 +5,7 @@ This repository contains a collection of blockchain-related projects and practic
 ## Table of Contents
 
 - [First 5 Practicals](First_5_Practicals/README.md)
-- [Further Practicals](Smart_contracts/README.md)
+- [Smart Contracts](Smart_contracts/README.md)
 
 ## First 5 Practicals
 
