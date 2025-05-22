@@ -5,7 +5,7 @@ This repository contains a collection of blockchain-related projects and practic
 ## Table of Contents
 
 - [First 5 Practicals](First_5_Practicals/README.md)
-- [Further Practicals](Futher_Practicals/README.md)
+- [Further Practicals](Smart_contracts/README.md)
 
 ## First 5 Practicals
 
@@ -82,7 +82,7 @@ The `First_5_Practicals` directory contains foundational blockchain exercises fo
 
 ## Further Practicals
 
-The `Futher_Practicals` directory contains more advanced Solidity smart contracts for Ethereum blockchain applications. Each contract has been implemented, compiled, and tested using Remix IDE.
+The `Smart_contracts` directory contains more advanced Solidity smart contracts for Ethereum blockchain applications. Each contract has been implemented, compiled, and tested using Remix IDE.
 
 ### 1. **Ether Splitter (`Ether_Splitter/EtherSplitter.sol`)**
 
@@ -90,7 +90,7 @@ The `Futher_Practicals` directory contains more advanced Solidity smart contract
 - Features include deposit function, automatic splitting, and recipient management
 - Use case: Automatic revenue sharing or payment distribution systems
 
-![Ether Splitter Implementation](Futher_Practicals/all_screenshots/Ether_split.png)
+![Ether Splitter Implementation](Smart_contracts/all_screenshots/Ether_split.png)
 
 **Key Functions:**
 
@@ -108,8 +108,8 @@ function updateRecipients(address payable _recipient1, address payable _recipien
 - Prevents double voting through address tracking
 - Use case: Transparent and tamper-proof elections or decision-making processes
 
-![Voting System Compilation & Deployment](Futher_Practicals/all_screenshots/voting_sytem_compilation_&_deployment.png)
-![Voting System Testing](Futher_Practicals/all_screenshots/voting_system_testing.png)
+![Voting System Compilation & Deployment](Smart_contracts/all_screenshots/voting_sytem_compilation_&_deployment.png)
+![Voting System Testing](Smart_contracts/all_screenshots/voting_system_testing.png)
 
 **Key Functions:**
 
@@ -127,8 +127,8 @@ function getCandidate(uint _candidateId) public view returns (uint, string memor
 - Stores student names and roll numbers with existence verification
 - Use case: Educational record management with immutable history
 
-![Student Records Compilation & Deployment](Futher_Practicals/all_screenshots/Student_records_compilation&_deployment.png)
-![Student Records Testing](Futher_Practicals/all_screenshots/Student_records_testing.png)
+![Student Records Compilation & Deployment](Smart_contracts/all_screenshots/Student_records_compilation&_deployment.png)
+![Student Records Testing](Smart_contracts/all_screenshots/Student_records_testing.png)
 
 **Key Functions:**
 
@@ -146,8 +146,8 @@ function getStudent(uint _rollNumber) public view returns (string memory, uint)
 - Allows only the contract owner to modify a secret value
 - Use case: Administrative control in decentralized applications
 
-![Owner Only Deployment](Futher_Practicals/all_screenshots/Only_owner_deployment.png)
-![Owner Only Testing](Futher_Practicals/all_screenshots/Only_owner_testing.png)
+![Owner Only Deployment](Smart_contracts/all_screenshots/Only_owner_deployment.png)
+![Owner Only Testing](Smart_contracts/all_screenshots/Only_owner_testing.png)
 
 **Key Functions:**
 
@@ -165,8 +165,8 @@ function transferOwnership(address _newOwner) public onlyOwner
 - Maintains donation history and total donations
 - Use case: Charity organizations or fundraising campaigns with recognition features
 
-![Top Donors Implementation](Futher_Practicals/all_screenshots/Top_donor.png)
-![Top Donors Deployment & Testing](Futher_Practicals/all_screenshots/Top_donor_deployment&testing.png)
+![Top Donors Implementation](Smart_contracts/all_screenshots/Top_donor.png)
+![Top Donors Deployment & Testing](Smart_contracts/all_screenshots/Top_donor_deployment&testing.png)
 
 **Key Functions:**
 
@@ -184,7 +184,7 @@ function getTopDonors() public view returns (address[3] memory, uint[3] memory)
 - Handles bidding, fund management, and auction completion
 - Use case: Decentralized auction platforms or NFT sales
 
-![Auction Bidding](Futher_Practicals/all_screenshots/Auction_bid.png)
+![Auction Bidding](Smart_contracts/all_screenshots/Auction_bid.png)
 
 **Key Functions:**
 
